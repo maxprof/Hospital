@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+<div class="container">
+	<div class="row">
+		<p>
+		  <strong>Название:</strong>
+		  <%= @price.title %>
+		</p>
+
+		<p>
+		  <strong>Цена:</strong>
+		  <%= @price.price %>
+		</p>
+
+		<%= link_to 'Редагувати', edit_price_path(@price) %> |
+		<%= link_to 'Назад', prices_path %>
+
+	</div>
+</div>

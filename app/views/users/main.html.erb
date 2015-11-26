@@ -1,0 +1,187 @@
+ <div class="slider">
+        <div id="da-slider" class="da-slider">
+            <div class="da-slide">
+                <label class="my-label"><span> </span></label>
+                <h2>ТІЛЬКИ КРАЩІ ЛІКАРІ</h2>
+                <p>ЛІКУЄМО УСІХ ПАЦІЄНТІВ</p>
+            </div>
+            <div class="da-slide">
+                <label class="my-label"><span> </span></label>
+                <h2>ПРАЦЮЄМО ЦІЛОДОБОВО</h2>
+                <p>ТЛЕФОНУЙТЕ ЦІЛОДОБОВО 937-99-92</p>
+            </div>
+            <nav class="da-arrows">
+                <span class="da-arrows-prev"></span>
+                <span class="da-arrows-next"></span>
+            </nav>
+        </div>
+            <script src="/assets/jquery.cslider.js"></script>
+            <script type="text/javascript">
+            $(function() {
+                $('#da-slider').cslider({
+                    autoplay: true,
+                    bgincrement: 450
+                });
+            });
+            </script>
+        </div>
+        <script>
+            $(function() {
+                $('.pink').hoverZoom({
+                    overlay: true, // false to turn off (default true)
+                    overlayColor: '#51A3C8', // overlay background color
+                    overlayOpacity: 0.7, // overlay opacity
+                    zoom: 0, // amount to zoom (px)
+                    speed: 300 // speed of the hover
+                });
+
+
+            });
+        </script>
+    <div class="about" id="about">
+        <div class="wrap">
+            <div class="head">
+                <span> </span>
+                <h3>Про нашу лікарню</h3>
+            </div>
+            <div class="about-grids">
+                <div class="about-grid">
+                    <h3>Лікарі</h3>
+                    <p>У нас працюють кращі лікарі з усієї України.</p>
+                </div>
+                <div class="about-grid">
+                    <h3>Паціенти</h3>
+                    <p>Ми однаково лікуємо кожного паціента незалежно від його статусу.</p>
+                </div>
+                <div class="about-grid">
+                    <h3>Робота</h3>
+                    <p>Ми виконуємо операції будь-якої складності із використанням сучасних технологій.</p>
+                </div>
+                <div class="clear"> </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+    <div class="services" id="services">
+        <div class="wrap">
+            <div class="head">
+                <span> </span>
+                <h3>Що ми робимо</h3>
+            </div>
+            <div class="services-grids">
+                <div class="services-grid">
+                    <div class="services-grid-left">
+                        <i class="fa fa-female"></i>
+                    </div>
+                    <div class="services-grid-right">
+                        <h4>Гінекологія</h4>
+                        <p>У клініці «Борис» ми проводимо діагностику та лікування запальних захворювань, патологій матки та шийки матки, інфекцій, дисгормональних порушень. Також ми пропонуємо весь спектр амбулаторного та стаціонарного хірургичного лікування. Цілодобова ургентна гінекологична допомога. Усі наші гінекологи працюють згідно стандартів МОЗ та рекомендацій европейських гінекологічних ассоціацій.</p>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="services-grid-left">
+                        <i class="fa fa-plus"></i>
+                    </div>
+                    <div class="services-grid-right">
+                        <h4>Травматологія</h4>
+                        <p>Зазвичай лікування та реабілітація займає від 1 до 10 днів. У клініці пацієнти «не залежуються» — оперативні втручання здійснюються в день отримання травми, що дозволяє згодом уникнути багатьох ускладнень.Особливу увагу в клініці «Борис» ми надаємо пацієнтам похилого віку, оскільки саме у цих пацієнтів відстрочка операції на пару днів призводить до несприятливого прогнозу надалі!
+                            <br />
+                            <br /> </p>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="services-grid-left">
+                        <i class="fa fa-eyedropper"></i>
+                    </div>
+                    <div class="services-grid-right">
+                        <h4>Нейрохірургія</h4>
+                        <p>Ми займаємося діагностикою таоперативним лікуванням захворювань головного мозку тапериферичної нервової системи. Значна частина оперативних втручань виконується з використанням мікрохірургічної техніки та операційного мікроскопа. </p>
+                    </div>
+                </div>
+                <div class="services-grid">
+                    <div class="services-grid-left">
+                        <i class="fa fa-hospital-o"></i>
+                    </div>
+                    <div class="services-grid-right">
+                        <h4>Кардіологія</h4>
+                        <p>Лікування кардіологічних хворих проводяться згідно сучасних рекомендацій европейських кардіологічних асссоціацій та товариств кардіологів та інших провідних кардіологічних асоціацій світу.
+                            <br />
+                            <br /> </p>
+                    </div>
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </div>
+        <div class="services-bg">
+        </div>
+    </div>
+    <div class="purches-it">
+        <h5>Like?</h5>
+        <a href="shortcodes.html">Зв'яжіться з нами!</a>
+    </div>
+    <div class="latest-news" id="news">
+        <div class="wrap">
+            <div class="head">
+                <span> </span>
+                <h3>Останні новини</h3>
+            </div>
+            <script type="text/javascript" src="/assets/jquery.flexisel.js"></script>
+            <script type="text/javascript">
+            $(window).load(function() {
+                $("#flexiselDemo3").flexisel({
+                    visibleItems: 3,
+                    animationSpeed: 1000,
+                    autoPlay: true,
+                    autoPlaySpeed: 3000,
+                    pauseOnHover: true,
+                    enableResponsiveBreakpoints: true,
+                    responsiveBreakpoints: {
+                        portrait: {
+                            changePoint: 480,
+                            visibleItems: 1
+                        },
+                        landscape: {
+                            changePoint: 640,
+                            visibleItems: 2
+                        },
+                        tablet: {
+                            changePoint: 768,
+                            visibleItems: 3
+                        }
+                    }
+                });
+            });
+            </script>
+            <ul id="flexiselDemo3">
+                <li>
+                    <div class="latest-news-grid">
+                        <h3>19/<span>09</span></h3>
+                        <p>А до нас приходили гості — дітки з англійського табору "Английська для дітей". Школа Green Country.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="latest-news-grid">
+                        <h3>12/<span>09</span></h3>
+                        <p>Бути лікарем — складна місія. Людина, яка своє життя присвячує медицині, без сумнівів, повинна мати покликання. Прагнення допомогти іншій людині, гуманізм — ці риси навряд чи можна прищепити з дитинства. Адже навчитися лікарському мистецтву, так само як сценічному, неможливо, якщо немає вроджених задатків.</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="latest-news-grid">
+                        <h3>23/<span>08</span></h3>
+                        <p>Клініка «Борис» пропонує повний профогляд дитини не для «галочки» і не для довідки (хоча форму 086/о для першокласників або довідку для школярів інших класів ми також видаємо) — а для здоров’я наших улюблених дітей:</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="latest-news-grid">
+                        <h3>10/<span>08</span></h3>
+                        <p>Клініка «Борис», City Beach Club Family, телеканал М1, благодійний фонд «Благомай», 95 квартал і багато українських артистів підтримали акцію подяки героям-військовослужбовцям, які перебувають на лікуванні в столичному військовому госпіталі.</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="clear"> </div>
+            <div class="bottom-border">
+                <span> </span>
+            </div>
+
+        </div>
+    </div>

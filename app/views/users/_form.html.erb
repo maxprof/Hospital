@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Ім'я" %><br>
+    <%= f.text_field :name, class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label "Прізвище" %><br>
+    <%= f.text_field :surname , class:"form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label "Вік" %><br>
+    <%= f.number_field :age, class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label "Одужав (Якщо так, то поставте галочку)" %><br>
+    <%= f.check_box :status, class:"form-control" %>
+  </div>
+  <div class="field">
+    <%= f.label "Дата поступлення" %><br>
+    <%= f.date_select :enter_date , class:"form-control"%>
+  </div>
+  <div class="field">
+    <%= f.label "Діагноз" %><br>
+    <%= f.text_area :diagnoz, class:"form-control" %>
+  </div>
+  <div class="actions">
+    <%= f.submit "Додати пацієнта" %>
+  </div>
+<% end %>
+
+  </div>
+</div>

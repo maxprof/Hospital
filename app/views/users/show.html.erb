@@ -1,0 +1,44 @@
+<div class="container">
+  <div class="row">
+    <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @user.surname %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @user.age %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @user.status %>
+</p>
+
+<p>
+  <strong>Enter date:</strong>
+  <%= @user.enter_date %>
+</p>
+
+<p>
+  <strong>Doctor:</strong>
+  <%= @user.admin_id %>
+</p>
+
+<p>
+  <strong>Diagnoz:</strong>
+  <%= @user.diagnoz %>
+</p>
+
+<%= link_to 'Редагувати', edit_user_path(@user) %> |
+<%= link_to 'Назад', users_path %>
+
+  </div>
+</div>

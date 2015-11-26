@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html ng-app>
+<head> 
+  <title>Hospital</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="application/x-javascript">
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <script type="text/javascript">
+        $(function() {
+            $('nav#menu-left').mmenu();
+        });
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<p class="notice"><%= notice %></p>
+<p class="aleert"><%= alert %></p>
+ <div id="page">
+        <div id="header">
+            <a class="navicon" href="#menu-left"> </a>
+        </div>
+        <nav id="menu-left">
+            <ul>
+                <li class="active"><a href="/">Головна</a></li>
+                <li><a href="/about/index">Про нас</a></li>
+                <li><a href="/news">Новини</a></li>
+                <li><a href="/contact/index">Контакти</a></li>
+                <li><a href="/prices">Ціни</a></li>
+                <% if doctor_signed_in? %>
+                    <li>
+                        <%= link_to 'Додати пацієнта', new_user_path %>
+                    </li>
+                    <li><a href="/users">Паціенти</a></li>
+                    <li>
+                        <%= link_to 'Вийти', destroy_doctor_session_path %>
+                    </li>
+                    <% else %>
+                    <li>
+                        <%= link_to 'Увійти', new_doctor_session_path %>
+                    </li>
+                    <li>
+                        <%= link_to 'Зареєструватися', new_doctor_registration_path%>
+                    </li>
+                <% end %>
+            </ul>
+        </nav>
+    </div>
+    <div class="header" id="move-top">
+        <div class="wrap">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="/"><img src="assets/logo.png" title="wildflat" /> </a>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="top-nav">
+                    <ul>
+                        <li class="active"><a href="/">Головна</a></li>
+                        <li><a href="/about/index">Про нас</a></li>
+                        <li><a href="/news">Новини</a></li>
+                        <li><a href="/contact/index">Контакти</a></li>
+                        <li><a href="/prices">Ціни</a></li>
+                            <% if doctor_signed_in? %>
+                                <li>
+                                    <%= link_to 'Додати пацієнта', new_user_path %>
+                                </li>
+                                <li><a href="/users">Паціенти</a></li>
+                                <li>
+                                    <%= link_to 'Вийти', destroy_doctor_session_path %>
+                                </li>
+                                <% else %>
+                                <li>
+                                    <%= link_to 'Увійти', new_doctor_session_path %>
+                                </li>
+                                <li>
+                                    <%= link_to 'Зареєструватися', new_doctor_registration_path%>
+                                </li>
+                             <% end %>
+                    </ul>
+                </div>
+        </div>
+        <div class="clear"> </div>
+    </div>
+
+ 	<%= yield %>
+
+
+     <div class="contact" id="contact">
+        <div class="wrap">
+            <div class="contact-left">
+                <div class="contact-head">
+                    <span> </span>
+                    <h3>Зв'яжіться з нами</h3>
+                </div>
+                <form>
+                    <div class="form-left">
+                        <input type="text" placeholder="Ім'я: " required />
+                        <input type="text" placeholder="Email: " required />
+                        <input type="text" placeholder="Телефон: " required />
+                    </div>
+                    <div class="form-right">
+                        <textarea rows="2" cols="70" onfocus="if(this.value == 'Comment') this.value='';" onblur="if(this.value == '') this.value='Comment';" placeholder="Коментар"></textarea>
+                    </div>
+                    <div class="clear"> </div>
+                    <input type="submit" value="Відіслати лист" />
+                    <div class="clear"> </div>
+                </form>
+            </div>
+            <div class="contact-right">
+                <div class="contact-head">
+                    <span> </span>
+                    <h3>FLICKR STREAM</h3>
+                </div>
+                <div class="flicker-grids">
+                    <ul>
+                        <li>
+                            <a href="#"><img src="assets/f1.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/f2.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/f3.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/f4.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/f5.jpg" alt="" /></a>
+                        </li>
+                        <li>
+                            <a href="#"><img src="assets/f6.jpg" alt="" /></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"> </div>
+        </div>
+    </div>
+
+
+    <script>
+        $(function() {
+            $('.pink').hoverZoom({
+                overlay: true, // false to turn off (default true)
+                overlayColor: '#51A3C8', // overlay background color
+                overlayOpacity: 0.7, // overlay opacity
+                zoom: 0, // amount to zoom (px)
+                speed: 300 // speed of the hover
+            });
+
+
+        });
+    </script>
+     <script type="text/javascript">
+        $(function() {
+
+            $('#da-slider').cslider({
+                autoplay: true,
+                bgincrement: 450
+            });
+
+        });
+    </script>
+        <script type="text/javascript">
+            $(window).load(function() {
+                $("#flexiselDemo3").flexisel({
+                    visibleItems: 3,
+                    animationSpeed: 1000,
+                    autoPlay: true,
+                    autoPlaySpeed: 3000,
+                    pauseOnHover: true,
+                    enableResponsiveBreakpoints: true,
+                    responsiveBreakpoints: {
+                        portrait: {
+                            changePoint: 480,
+                            visibleItems: 1
+                        },
+                        landscape: {
+                            changePoint: 640,
+                            visibleItems: 2
+                        },
+                        tablet: {
+                            changePoint: 768,
+                            visibleItems: 3
+                        }
+                    }
+                });
+            });
+            </script>
+            <script src="/assets/jquery.cslider.js"></script>
+
+
+
+</body>
+</html>

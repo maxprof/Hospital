@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row">
+    <p id="notice"><%= notice %></p>
+        <div class="head">
+            <span> </span>
+            <h3>Новини</h3>
+        </div>
+    
+
+    <div class="news-list">
+      <% @news.each do |news| %>
+
+        <div class="news-block">
+          <div class="row">
+            <div class="col-lg-3">
+              <%= image_tag news.image.url(:medium) %>
+            </div>
+            <div class="col-lg-9">
+              <h2><%= news.title %></h2>
+              <hr>
+              <p><%= news.text %></p>
+
+                <% if news.doctor != current_doctor %>
+                  <%= link_to 'Редагувати', edit_news_path(news), class:"btn btn-success" %>
+                  <%= link_to 'Видалити', news, class:"btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <%= link_to 'Переглянути', news, class:"btn btn-danger" %>
+                  <%= link_to 'Додати новину', new_news_path, class:"btn btn-warning" %>
+                <% else %>
+                  <%= link_to 'Переглянути', news, class:"btn btn-danger" %>
+                <% end %>
+
+            </div>
+          </div>
+        </div>
+        
+
+      <% end %>
+    </div>
+    <div class="clearfix"></div>
+  </div>
+</div>

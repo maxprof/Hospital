@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+  <p id="notice"><%= notice %></p>
+    <div class="head">
+        <span> </span>
+        <h3>Список докторів</h3>
+    </div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Ім'я</th>
+      <th>Прізвище</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doctors.each do |doc| %>
+      <tr>
+        <td><%= doc.doctor_first_name %></td>
+        <td><%= doc.doctor_second_name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+  </div>
+</div>
