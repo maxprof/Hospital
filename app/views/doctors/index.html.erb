@@ -1,6 +1,6 @@
 <div class="container">
   <div class="row">
-  <p id="notice"><%= notice %></p>
+  <p id="notice"><%= notice %></p> 
     <div class="head">
         <span> </span>
         <h3>Список докторів</h3>
@@ -15,10 +15,13 @@
   </thead>
 
   <tbody>
-    <% @doctors.each do |doc| %>
+    <% @doctor.each do |doc| %>
       <tr>
         <td><%= doc.doctor_first_name %></td>
         <td><%= doc.doctor_second_name %></td>
+        <td><%= link_to 'Переглянути', doc %></td>
+        <td><%= link_to 'Редагувати', edit_doctor_path(doc) %></td>
+        <td><%= link_to 'Видалити', doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

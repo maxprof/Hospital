@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126230544) do
+ActiveRecord::Schema.define(version: 20151127163640) do
 
   create_table "doctors", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -50,6 +50,7 @@ ActiveRecord::Schema.define(version: 20151126230544) do
     t.integer  "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "price_info"
   end
 
   create_table "users", force: :cascade do |t|

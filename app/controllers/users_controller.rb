@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :destroy, :patients]
 
   # GET /users
   # GET /users.json
@@ -9,7 +9,6 @@ class UsersController < ApplicationController
 
   def main
   end
-
   # GET /users/1
   # GET /users/1.json
   def show
@@ -24,9 +23,6 @@ class UsersController < ApplicationController
   def edit
   end
 
-  def findAge
-    @user  = User.find_by(age: "20")
-  end
   # POST /users
   # POST /users.json
   def create

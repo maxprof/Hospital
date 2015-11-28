@@ -5,19 +5,22 @@
             	<span> </span>
             	<h3>Перегляд</h3>
         	</div>
-		<%= image_tag @news.image.url(:medium) %>
-		<p>
-		  <strong>Title:</strong>
-		  <%= @news.title %>
-		</p>
+        <div class="col-md-3"><%= image_tag @news.image.url(:medium) %></div>
+		<div class="col-md-9">
+			<p>
+			  <strong>Заголовок:</strong>
+			  <%= @news.title %>
+			</p>
 
-		<p>
-		  <strong>Text:</strong>
-		  <%= @news.text %>
-		</p>
+			<p>
+			  <strong>Текст:</strong>
+			  <%= @news.text %>
+			</p>
+			<br />
+			<%= link_to 'Редагувати', edit_news_path(@news), class:"myBtn" %>
+			<%= link_to 'Назад', news_index_path, class:"myBtn myBtn2"%>
+		</div>
 
-		<%= link_to 'Редагувати', edit_news_path(@news), class:"btn btn-success"%> |
-		<%= link_to 'Назад', news_index_path, class:"btn btn-warning"%>
 
 	</div>
 </div>

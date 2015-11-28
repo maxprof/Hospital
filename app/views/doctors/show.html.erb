@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="row">
+    <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Ім'я:</strong>
+  <%= @doctor.doctor_first_name %>
+</p>
+
+<p>
+  <strong>Прізвище:</strong>
+  <%= @doctor.doctor_second_name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @doctor.email %>
+</p>
+
+<p>
+  <strong>Кількість пацієнтів:</strong>
+  <%= @length %>
+</p>
+
+
+
+<%= link_to 'Редагувати', edit_doctor_path(@doctor) %> |
+<%= link_to 'Назад', doctors_path %>
+
+  </div>
+</div>

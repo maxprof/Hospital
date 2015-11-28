@@ -40,11 +40,14 @@
                 <li><a href="/prices">Ціни</a></li>
                 <% if doctor_signed_in? %>
                     <li>
+                        <%= link_to 'Кабінет', doctor_path(current_doctor) %>
+                    </li>
+                    <li>
                         <%= link_to 'Додати пацієнта', new_user_path %>
                     </li>
                     <li><a href="/users">Паціенти</a></li>
                     <li>
-                        <%= link_to 'Вийти', destroy_doctor_session_path %>
+                        <%= link_to('Вийти', destroy_doctor_session_path) %> 
                     </li>
                     <% else %>
                     <li>
@@ -74,11 +77,14 @@
                         <li><a href="/prices">Ціни</a></li>
                             <% if doctor_signed_in? %>
                                 <li>
+                                    <%= link_to 'Кабінет', doctor_path(current_doctor) %>
+                                </li>
+                                <li>
                                     <%= link_to 'Додати пацієнта', new_user_path %>
                                 </li>
                                 <li><a href="/users">Паціенти</a></li>
                                 <li>
-                                    <%= link_to 'Вийти', destroy_doctor_session_path %>
+                                    <%= link_to('Вийти', destroy_doctor_session_path) %> 
                                 </li>
                                 <% else %>
                                 <li>

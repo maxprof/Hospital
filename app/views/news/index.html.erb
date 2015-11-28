@@ -21,20 +21,19 @@
               <p><%= news.text %></p>
 
                 <% if news.doctor != current_doctor %>
-                  <%= link_to 'Редагувати', edit_news_path(news), class:"btn btn-success" %>
-                  <%= link_to 'Видалити', news, class:"btn btn-primary", method: :delete, data: { confirm: 'Are you sure?' } %>
-                  <%= link_to 'Переглянути', news, class:"btn btn-danger" %>
-                  <%= link_to 'Додати новину', new_news_path, class:"btn btn-warning" %>
+                  <%= link_to 'Видалити', news, class:"myBtn myBtn1", method: :delete, data: { confirm: 'Are you sure?' } %>
+                  <%= link_to 'Редагувати', edit_news_path(news), class:"myBtn" %>
+                  <%= link_to 'Переглянути', news, class:"myBtn myBtn2" %>
+                  
                 <% else %>
-                  <%= link_to 'Переглянути', news, class:"btn btn-danger" %>
+                  <%= link_to 'Переглянути', news, class:"myBtn myBtn2" %>
                 <% end %>
 
             </div>
           </div>
         </div>
-        
-
       <% end %>
+      <%= link_to 'Додати новину', new_news_path, class:"myBtn myBtn3" %>
     </div>
     <div class="clearfix"></div>
   </div>

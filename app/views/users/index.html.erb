@@ -15,6 +15,7 @@
       <th>Статус</th>
       <th>Дата поступлення</th>
       <th>Ім'я доктора</th>
+      <th>Id доктора</th>
       <th>Діагноз</th>
       <th colspan="3"></th>
     </tr>
@@ -31,8 +32,10 @@
             <% else %>
             <td>Хворий</td>
           <% end %>
+
         <td><%= user.enter_date %></td>
-        <td><%= user.doctor_first_name %></td>
+        <td><%= user.doctor.doctor_first_name + " " + user.doctor.doctor_second_name %></td>
+        <td><%= user.doctor_id %></td>
         <td><%= user.diagnoz %></td>
         <td><%= link_to 'Переглянути', user %></td>
         <% if user.doctor == current_doctor %>
