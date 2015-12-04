@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.all 
   end
 
   def main
@@ -22,6 +22,7 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
   end
+#
 
   # POST /users
   # POST /users.json
@@ -38,6 +39,7 @@ class UsersController < ApplicationController
       end
     end
   end
+
 
   # PATCH/PUT /users/1
   # PATCH/PUT /users/1.json
@@ -71,6 +73,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:name, :surname, :age, :status, :enter_date, :admin_id, :diagnoz, :doctor_first_name, :doctor_second_name)
+      params.require(:user).permit(:name, :surname, :age, :status, :enter_date, :admin_id, :diagnoz, :doctor_first_name, :doctor_second_name, :user_prices)
     end
 end

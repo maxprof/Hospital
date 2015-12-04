@@ -6,4 +6,5 @@ class Doctor < ActiveRecord::Base
   has_many :users
   has_many :prices
   has_many :news
+  has_many :appointments
 end

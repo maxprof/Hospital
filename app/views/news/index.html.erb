@@ -19,7 +19,7 @@
               <h2><%= news.title %></h2>
               <hr>
               <p><%= news.text %></p>
-
+<br />
                 <% if news.doctor != current_doctor %>
                   <%= link_to 'Видалити', news, class:"myBtn myBtn1", method: :delete, data: { confirm: 'Are you sure?' } %>
                   <%= link_to 'Редагувати', edit_news_path(news), class:"myBtn" %>

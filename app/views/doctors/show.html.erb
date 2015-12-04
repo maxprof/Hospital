@@ -11,21 +11,26 @@
   <strong>Прізвище:</strong>
   <%= @doctor.doctor_second_name %>
 </p>
-
+<p>
+  <strong>Оплата:</strong>
+  <%= @doctor.doctor_hour_price  %>
+</p>
 <p>
   <strong>Email:</strong>
   <%= @doctor.email %>
 </p>
 
 <p>
-  <strong>Кількість пацієнтів:</strong>
+  <strong>Кількість пацієнтів за весь час:</strong>
   <%= @length %>
 </p>
 
-
-
-<%= link_to 'Редагувати', edit_doctor_path(@doctor) %> |
-<%= link_to 'Назад', doctors_path %>
-
+<p>
+  <strong>Кількість пацієнтів за останній тиждень:</strong>
+  <%= @current_doctor_patients %>
+</p>
+  <strong>Заробив:</strong>
+  <%= @current_money %>
+</p>
   </div>
 </div>

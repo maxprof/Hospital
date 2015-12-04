@@ -1,22 +1,21 @@
 <div class="container">
 	<div class="row">
 	<p id="notice"><%= notice %></p>
-		<p>
-		  <strong>Название:</strong>
-		  <%= @price.title %>
-		</p>
 
-		<p>
-		  <strong>Цена:</strong>
-		  <%= @price.price %>
+	<div class="col-lg-3">
+		<p class="price-title"> 
+		<strong>Назва:</strong>
+			<%= @price.title %>
 		</p>
-		<p>
-		  <strong>Опис:</strong>
-		  <%= @price.price_info %>
-		</p>
-
-		<%= link_to 'Редагувати', edit_price_path(@price) %> |
-		<%= link_to 'Назад', prices_path %>
-
+		<p class="price-price">
+			<strong>Ціна:</strong>
+			<%= @price.price %>
+		</p> 
+	</div>
+	<div class="col-lg-9"> <%= @price.price_info %></div>
+	<div class="clearfix"></div>
+		<a class="myBtn myBtn1" href="/prices/4/edit">Редагувати</a>
+		<%= link_to 'Назад', prices_path , class:"myBtn myBtn2" %>
 	</div>
 </div>
+

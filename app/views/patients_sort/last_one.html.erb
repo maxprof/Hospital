@@ -1,0 +1,48 @@
+<div class="container">
+	<div class="row">
+	    <div class="head">
+	        <span> </span>
+	        <h3>Список пацієнтів за останній 1 день</h3>
+        </div>
+        <table class="table table-striped">
+		  <thead>
+		    <tr>
+		      <th>Ім'я</th>
+		      <th>Прізвище</th>
+		      <th>Вік</th>
+		      <th>Статус</th>
+		      <th>Дата поступлення</th>
+		      <th>Ім'я доктора</th>
+		      <th>Id доктора</th>
+		      <th>Діагноз</th>
+		      <th colspan="3"></th>
+		    </tr>
+		  </thead>
+
+		  <tbody>
+		    <% @users.each do |user| %>
+		      <tr>
+		        <td><%= user.name %></td>
+		        <td><%= user.surname %></td>
+		        <td><%= user.age %></td>
+		          <% if user.status == true %>
+		            <td>Здоровий</td>
+		            <% else %>
+		            <td>Хворий</td>
+		          <% end %>
+
+		        <td><%= user.enter_date %></td>
+		        <td><%= user.doctor.doctor_first_name + " " + user.doctor.doctor_second_name %></td>
+		        <td><%= user.doctor_id %></td>
+		        <td><%= user.diagnoz %></td>
+		        <td><%= link_to 'Переглянути', user %></td>
+		        <% if user.doctor == current_doctor %>
+		          <td><%= link_to 'Редагувати', edit_user_path(user) %></td>
+		          <td><%= link_to 'Видалити', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		        <% end %>
+		      </tr>
+		    <% end %>
+		  </tbody>
+		</table>
+    </div>
+</div>

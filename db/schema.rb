@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151127163640) do
+ActiveRecord::Schema.define(version: 20151204093802) do
+
+  create_table "appointments", force: :cascade do |t|
+    t.integer  "doctor_id"
+    t.integer  "price_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "doctors", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,6 +36,7 @@ ActiveRecord::Schema.define(version: 20151127163640) do
     t.datetime "updated_at",                          null: false
     t.string   "doctor_first_name"
     t.string   "doctor_second_name"
+    t.integer  "doctor_hour_price"
   end
 
   add_index "doctors", ["email"], name: "index_doctors_on_email", unique: true
@@ -66,6 +75,7 @@ ActiveRecord::Schema.define(version: 20151127163640) do
     t.integer  "doctor_id"
     t.string   "doctor_first_name"
     t.string   "doctor_second_name"
+    t.string   "user_prices"
   end
 
 end

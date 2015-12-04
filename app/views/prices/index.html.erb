@@ -6,7 +6,7 @@
         <h3>Список товарів</h3>
     </div>
 
-    <table class="table table-stripped">
+    <table class="table table-stripped price-table">
       <thead>
         <tr>
           <th>Название</th>
@@ -21,9 +21,9 @@
             <td><%= price.title %></td>
             <td><%= price.price %></td>
             <% if doctor_signed_in?%>
-              <td><%= link_to 'Show', price ,class:"myBtn myBtn2" %>
-              <%= link_to 'Edit', edit_price_path(price), class:"myBtn myBtn1" %>
-              <%= link_to 'Destroy', price, method: :delete, data: { confirm: 'Are you sure?' }, class:"myBtn myBtn3" %></td>
+              <td><%= link_to 'Показати', price ,class:"myBtn myBtn2" %>
+              <%= link_to 'Редагувати', edit_price_path(price), class:"myBtn myBtn1" %>
+              <%= link_to 'Видалити', price, method: :delete, data: { confirm: 'Are you sure?' }, class:"myBtn myBtn3" %></td>
             <% end %>
           </tr>
         <% end %>

@@ -51,6 +51,10 @@
 <% if doctor_signed_in?%>
   <%= link_to 'Додати пацієнта', new_user_path, class:"btn btn-warning" %>
 <% end %>
-<%= link_to 'Список хворих паціентів', healthy_index_path, class:"btn btn-success"  %>
+  <%= link_to 'Список хворих паціентів', healthy_index_path, class:"btn btn-success"  %>  <br />
+  <div class="clearfix"></div>
+  <%= link_to 'Список паціентів за останніх 3 дні', patients_sort_last_three_path, class:"myBtn"  %> <br />
+  <%= link_to 'Список паціентів за останніх 7 днів', patients_sort_last_seven_path, class:"myBtn myBtn2"  %> <br />
+  <%= link_to 'Список паціентів за останній 1 день', patients_sort_last_one_path, class:"myBtn myBtn3"  %>
   </div>
 </div>

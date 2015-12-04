@@ -11,6 +11,7 @@
     <tr>
       <th>Ім'я</th>
       <th>Прізвище</th>
+      <th>Сумма за тиждень</th>
     </tr>
   </thead>
 
@@ -19,6 +20,7 @@
       <tr>
         <td><%= doc.doctor_first_name %></td>
         <td><%= doc.doctor_second_name %></td>
+        <td><%= @current_money %></td>
         <td><%= link_to 'Переглянути', doc %></td>
         <td><%= link_to 'Редагувати', edit_doctor_path(doc) %></td>
         <td><%= link_to 'Видалити', doc, method: :delete, data: { confirm: 'Are you sure?' } %></td>

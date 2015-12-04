@@ -29,12 +29,16 @@
 
 <p>
   <strong>Doctor:</strong>
-  <%= @user.admin_id %>
+  <%= @user.doctor.doctor_first_name + " " + @user.doctor.doctor_second_name %>
 </p>
 
 <p>
   <strong>Diagnoz:</strong>
   <%= @user.diagnoz %>
+</p>
+<p>
+  <strong>Список назначенх ліків:</strong>
+  <%= @user.user_prices %> 
 </p>
 
 <%= link_to 'Редагувати', edit_user_path(@user) %> |
