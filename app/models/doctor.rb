@@ -7,4 +7,10 @@ class Doctor < ActiveRecord::Base
   has_many :prices
   has_many :news
   has_many :appointments
+
+
+  def current_money
+    doctor_hour_price.to_f*users.where("enter_date >= ?", 7.days.ago).count
+  end
 end
+

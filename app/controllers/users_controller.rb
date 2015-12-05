@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   # GET /users/new
   def new
     @user = current_doctor.users.new
-  end
+  end 
 
   # GET /users/1/edit
   def edit

@@ -14,8 +14,9 @@
 //= require turbolinks
 //= require jquery_ujs
 //= require jquery
-//= require jquery_ujs
 //= require angular
+//= require raphael
+//= require morris
 //= require_tree .
 
 /* #####################################################################
@@ -28,8 +29,8 @@
    #
    ##################################################################### */
    
+
 $(function() {
-    
     var $formLogin = $('#login-form');
     var $formLost = $('#lost-form');
     var $formRegister = $('#register-form');

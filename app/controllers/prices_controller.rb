@@ -18,7 +18,7 @@ class PricesController < ApplicationController
   end
 
   # GET /prices/1/edit
-  def edit
+  def edit 
   end
 
   # POST /prices
