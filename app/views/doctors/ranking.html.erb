@@ -1,0 +1,119 @@
+<div class="container">
+  <div class="row">
+  <p id="notice"><%= notice %></p> 
+    <div class="head">
+        <span> </span>
+        <h3>Рейтинг лікарів по зарплатні</h3>
+    </div>
+
+    <!-- <div id="doc_diagram"></div> -->
+  <%= content_tag :div, "", id: "hour_price_ranking", data: {doctor: 
+    @doctor} %>
+<br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Ім'я</th>
+      <th>Прізвище</th>
+      <th>Зарплатня у (грн) за прийом</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @doctor.each do |doc| %>
+      <tr>
+        <td><%= doc.doctor_first_name %></td>
+        <td><%= doc.doctor_second_name %></td>
+        <td><%= doc.doctor_hour_price  %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+    <div class="head">
+        <span> </span>
+        <h3>Заробили за останній тиждень</h3>
+    </div>
+  <%= content_tag :div, "", id: "week_ranking", data: {doctor: 
+    @doctor} %>
+<br>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Ім'я</th>
+        <th>Прізвище</th>
+        <th>Сумма</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @doctor.each do |doc| %>
+        <tr>
+          <td><%= doc.doctor_first_name %></td>
+          <td><%= doc.doctor_second_name %></td>
+          <td><%= doc.set_current_money  %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<br>
+
+
+    <div class="head">
+        <span> </span>
+        <h3>Рейтинг лікарів по кількості пацієнтів</h3>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Ім'я</th>
+          <th>Прізвище</th>
+          <th>Кількість пацієнтів за весь час </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @doctor.each do |doc| %>
+          <tr>
+            <td><%= doc.doctor_first_name %></td>
+            <td><%= doc.doctor_second_name %></td>
+            <td><%= doc.user_count_all_time %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+<br>
+
+    <div class="head">
+        <span> </span>
+        <h3>Рейтинг лікарів по кількості пацієнтів за останні 7 днів</h3>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Ім'я</th>
+          <th>Прізвище</th>
+          <th>Кількість пацієнтів за весь час </th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @doctor.each do |doc| %>
+          <tr>
+            <td><%= doc.doctor_first_name %></td>
+            <td><%= doc.doctor_second_name %></td>
+            <td><%= doc.user_count_seven_days %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+
+  </div>
+</div> 
+

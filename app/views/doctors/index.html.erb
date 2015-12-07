@@ -6,9 +6,6 @@
         <h3>Список докторів</h3>
     </div>
 
-    <!-- <div id="doc_diagram"></div> -->
-  <%= content_tag :div, "", id: "doc_diagram", data: {doctor: 
-    @doctor} %>
 
 <table class="table table-striped">
   <thead>
@@ -34,14 +31,3 @@
 <br>
   </div>
 </div> 
-<script>
-  window.onload = function() {
-    Morris.Bar({
-      element: 'doc_diagram',
-      data: $('#doc_diagram').data('doctor'),
-      xkey: 'doctor_first_name',
-      ykeys: ['doc.current_money'],
-      labels: ['Заробив за останній тиждень']
-    });
-};
-</script>

@@ -1,7 +1,13 @@
 class DoctorsController < ApplicationController
 	before_action :set_doctor, only: [:show, :edit, :update, :destroy]
+
 	def index
 		@doctor = Doctor.all
+	end
+
+	def ranking
+		@doctor = Doctor.all
+
 	end
 
 	def show

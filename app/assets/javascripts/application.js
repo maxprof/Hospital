@@ -31,6 +31,7 @@
    
 
 $(function() {
+
     var $formLogin = $('#login-form');
     var $formLost = $('#lost-form');
     var $formRegister = $('#register-form');
@@ -115,3 +116,28 @@ $(function() {
   		}, $msgShowTime);
     }
 });
+
+$(document).ready(function() {
+      
+    Morris.Bar({
+      element: 'week_ranking',
+      data: $('#week_ranking').data('doctor'),
+      xkey: 'doctor_first_name',
+      ykeys: ['doctor_week_price'],
+      labels: ['Рейтинг зарплат за тиждень']
+    });
+
+
+});  
+$(document).ready(function() {
+      
+    Morris.Bar({
+      element: 'hour_price_ranking',
+      data: $('#hour_price_ranking').data('doctor'),
+      xkey: 'doctor_first_name',
+      ykeys: ['doctor_hour_price'],
+      labels: ['Ціна за годину']
+    });
+
+
+});  
