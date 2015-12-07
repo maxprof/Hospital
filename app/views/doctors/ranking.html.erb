@@ -10,7 +10,7 @@
   <%= content_tag :div, "", id: "hour_price_ranking", data: {doctor: 
     @doctor} %>
 <br>
-
+<br>
 <table class="table table-striped">
   <thead>
     <tr>
@@ -64,8 +64,12 @@
 
     <div class="head">
         <span> </span>
-        <h3>Рейтинг лікарів по кількості пацієнтів</h3>
+        <h3>Рейтинг лікарів по кількості пацієнтів за весь час</h3>
     </div>
+    <br>
+  <%= content_tag :div, "", id: "doctor_all_time_users", data: {doctor: 
+    @doctor} %>
+    <br>
 
     <table class="table table-striped">
       <thead>
@@ -81,7 +85,7 @@
           <tr>
             <td><%= doc.doctor_first_name %></td>
             <td><%= doc.doctor_second_name %></td>
-            <td><%= doc.user_count_all_time %></td>
+            <td><%= doc.doctor_all_time_users %></td>
           </tr>
         <% end %>
       </tbody>
@@ -92,13 +96,16 @@
         <span> </span>
         <h3>Рейтинг лікарів по кількості пацієнтів за останні 7 днів</h3>
     </div>
-
+    <br>
+  <%= content_tag :div, "", id: "user_count_seven_days", data: {doctor: 
+    @doctor} %>
+    <br>
     <table class="table table-striped">
       <thead>
         <tr>
           <th>Ім'я</th>
           <th>Прізвище</th>
-          <th>Кількість пацієнтів за весь час </th>
+          <th>Кількість пацієнтів за 7 днів </th>
         </tr>
       </thead>
 

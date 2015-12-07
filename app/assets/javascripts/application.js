@@ -141,3 +141,25 @@ $(document).ready(function() {
 
 
 });  
+$(document).ready(function() {
+      
+    Morris.Bar({
+      element: 'doctor_all_time_users',
+      data: $('#doctor_all_time_users').data('doctor'),
+      xkey: 'doctor_first_name',
+      ykeys: ['doctor_all_time_users'],
+      labels: ['Пацієнти за весь час']
+    });
+
+});
+$(document).ready(function() {
+      
+    Morris.Bar({
+      element: 'user_count_seven_days',
+      data: $('#user_count_seven_days').data('doctor'),
+      xkey: 'doctor_first_name',
+      ykeys: ['user_count_seven_days'],
+      labels: ['Пацієнти останні 7 днів']
+    });
+
+});

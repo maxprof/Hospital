@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151205121336) do
+ActiveRecord::Schema.define(version: 20151207150409) do
 
   create_table "appointments", force: :cascade do |t|
     t.integer  "doctor_id"
@@ -38,6 +38,8 @@ ActiveRecord::Schema.define(version: 20151205121336) do
     t.string   "doctor_second_name"
     t.integer  "doctor_hour_price"
     t.float    "doctor_week_price"
+    t.float    "doctor_all_time_users"
+    t.float    "user_count_seven_days"
   end
 
   add_index "doctors", ["email"], name: "index_doctors_on_email", unique: true
