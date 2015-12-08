@@ -33,7 +33,9 @@
           </div>
         </div>
       <% end %>
+       <% if doctor_signed_in? %>
       <%= link_to 'Додати новину', new_news_path, class:"myBtn myBtn3" %>
+      <% end %>
     </div>
     <div class="clearfix"></div>
   </div>

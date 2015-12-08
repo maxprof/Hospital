@@ -48,8 +48,15 @@
                     </li>
                     <li><a href="/users">Паціенти</a></li>
                     <li>
-                        <%= link_to('Вийти', destroy_doctor_session_path) %> 
+                        <%= link_to('Список', doctors_path) %>
                     </li>
+                    <li>
+                        <%= link_to('Рейтинг', doctors_ranking_path) %>
+                    </li>
+                    <li>
+                        <%= link_to('Вийти', destroy_doctor_session_path) %>
+                    </li>
+
                     <% else %>
                     <li>
                         <%= link_to 'Увійти', new_doctor_session_path %>
@@ -85,8 +92,15 @@
                                 </li>
                                 <li><a href="/users">Паціенти</a></li>
                                 <li>
+                                    <%= link_to('Список', doctors_path) %>
+                                </li>
+                                <li>
+                                    <%= link_to('Рейтинг', doctors_ranking_path) %>
+                                </li>
+                                <li>
                                     <%= link_to('Вийти', destroy_doctor_session_path) %> 
                                 </li>
+
                                 <% else %>
                                 <li>
                                     <%= link_to 'Увійти', new_doctor_session_path %>

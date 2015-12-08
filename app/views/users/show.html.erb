@@ -1,7 +1,14 @@
 <div class="container">
   <div class="row">
     <p id="notice"><%= notice %></p>
-
+        <div class="head">
+            <span> </span>
+            <h3>Новий пацієнт</h3>
+        </div>
+      <div class="col-lg-6">
+        <img src="../assets/doctor-image.png" alt="" />
+      </div>
+      <div class="col-lg-6 doctor-show">
 <p>
   <strong>Name:</strong>
   <%= @user.name %>
@@ -40,9 +47,9 @@
   <strong>Список назначенх ліків:</strong>
   <%= @user.user_prices %> 
 </p>
-
-<%= link_to 'Редагувати', edit_user_path(@user) %> |
-<%= link_to 'Назад', users_path %>
+</div>
+<%= link_to 'Редагувати', edit_user_path(@user), class:"myBtn"  %> 
+<%= link_to 'Назад', users_path, class:"myBtn myBtn2" %>
 
   </div>
 </div>

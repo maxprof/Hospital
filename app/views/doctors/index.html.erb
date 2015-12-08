@@ -13,6 +13,9 @@
       <th>Ім'я</th>
       <th>Прізвище</th>
       <th>Сумма за тиждень</th>
+      <th>Пацієнти за тиждень</th>
+      <th>Пацієнти за весь час</th>
+
     </tr>
   </thead>
 
@@ -21,7 +24,11 @@
       <tr>
         <td><%= doc.doctor_first_name %></td>
         <td><%= doc.doctor_second_name %></td>
-        <td><%= doc.current_money %></td>
+        <td><%= doc.set_current_money %></td>
+        <td><%= doc.set_user_count_seven_days %></td>
+        <td><%= doc.set_user_count_all_time %></td>
+
+
         <td><%= link_to 'Переглянути', doc %></td>
       </tr>
     <% end %>
@@ -30,4 +37,4 @@
 
 <br>
   </div>
-</div> 
+</div>  

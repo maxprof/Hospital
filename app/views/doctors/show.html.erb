@@ -1,34 +1,43 @@
 <div class="container">
   <div class="row">
     <p id="notice"><%= notice %></p>
+        <div class="head">
+            <span> </span>
+            <h3>Новий пацієнт</h3>
+        </div>
+      <div class="col-lg-6">
+        <img src="../assets/doctor-image.png" alt="" />
+      </div>
+      <div class="col-lg-6 doctor-show">
+        <p>
+          <strong>Ім'я:</strong>
+          <%= @doctor.doctor_first_name %>
+        </p>
 
-<p>
-  <strong>Ім'я:</strong>
-  <%= @doctor.doctor_first_name %>
-</p>
+        <p>
+          <strong>Прізвище:</strong>
+          <%= @doctor.doctor_second_name %>
+        </p>
+        <p>
+          <strong>Оплата:</strong>
+          <%= @doctor.doctor_hour_price  %>
+        </p>
+        <p>
+          <strong>Email:</strong>
+          <%= @doctor.email %>
+        </p>
 
-<p>
-  <strong>Прізвище:</strong>
-  <%= @doctor.doctor_second_name %>
-</p>
-<p>
-  <strong>Оплата:</strong>
-  <%= @doctor.doctor_hour_price  %>
-</p>
-<p>
-  <strong>Email:</strong>
-  <%= @doctor.email %>
-</p>
+        <p>
+          <strong>Кількість пацієнтів за весь час:</strong>
+          <%= @length %>
+        </p>
 
-<p>
-  <strong>Кількість пацієнтів за весь час:</strong>
-  <%= @length %>
-</p>
+        <p>
+          <strong>Кількість пацієнтів за останній тиждень:</strong>
+          <%= @current_doctor_patients %>
+        </p>
+      </div>  
 
-<p>
-  <strong>Кількість пацієнтів за останній тиждень:</strong>
-  <%= @current_doctor_patients %>
-</p>
 
   </div>
 </div>

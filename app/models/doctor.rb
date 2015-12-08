@@ -8,6 +8,8 @@ class Doctor < ActiveRecord::Base
   has_many :news
   before_save :set_current_money
   before_save :set_user_count_all_time
+  before_save :set_user_count_seven_days
+  
 
 
   def set_user_count_all_time
@@ -21,7 +23,7 @@ class Doctor < ActiveRecord::Base
   def set_user_count_seven_days
       self.user_count_seven_days ||= self.users.where("enter_date >= ?", 7.days.ago).count
   end
-  
+
   def doctor_week_price
     doctor_hour_price.to_f*users.where("enter_date >= ?", 7.days.ago).count
   end

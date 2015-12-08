@@ -304,13 +304,13 @@ body {
 
 .header-right {
     float: right;
-    width: 67%;
+    width: 80%;
     font-family: 'nexa_boldregular';
     position: relative;
 }
 
 .top-nav {
-    float: left;
+    float: right;
 }
 
 .top-nav ul li {
@@ -4110,4 +4110,10 @@ textarea.form-control {
 }
 .center-block{
     float: none;
+}
+.doctor-show p {
+    padding: 10px 0px;
+}
+.col-lg-6.test-class>.container {
+    width: 100%;
 }
