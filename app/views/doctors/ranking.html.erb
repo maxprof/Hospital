@@ -85,7 +85,7 @@
           <tr>
             <td><%= doc.doctor_first_name %></td>
             <td><%= doc.doctor_second_name %></td>
-            <td><%= doc.doctor_all_time_users %></td>
+            <td><%= doc.doctor_all_time_users*125 %></td>
           </tr>
         <% end %>
       </tbody>
@@ -114,7 +114,7 @@
           <tr>
             <td><%= doc.doctor_first_name %></td>
             <td><%= doc.doctor_second_name %></td>
-            <td><%= doc.user_count_seven_days %></td>
+            <td><%= doc.user_count_seven_days*14 %></td>
           </tr>
         <% end %>
       </tbody>

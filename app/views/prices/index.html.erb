@@ -12,6 +12,7 @@
           <th>Название</th>
           <th>Цена</th>
           <th colspan="3"></th>
+          <th></th>
         </tr>
       </thead>
 
@@ -20,8 +21,9 @@
           <tr>
             <td><%= price.title %></td>
             <td><%= price.price %></td>
+           <td><%= link_to 'Показати', price ,class:"myBtn myBtn2" %></td>
             <% if doctor_signed_in?%>
-              <td><%= link_to 'Показати', price ,class:"myBtn myBtn2" %>
+              <td>
               <%= link_to 'Редагувати', edit_price_path(price), class:"myBtn myBtn1"  %>
               <%= link_to 'Видалити', price, method: :delete, data: { confirm: 'Are you sure?' }, class:"myBtn myBtn3" %></td>
             <% end %>

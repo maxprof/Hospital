@@ -25,8 +25,8 @@
         <td><%= doc.doctor_first_name %></td>
         <td><%= doc.doctor_second_name %></td>
         <td><%= doc.set_current_money %></td>
-        <td><%= doc.set_user_count_seven_days %></td>
-        <td><%= doc.set_user_count_all_time %></td>
+        <td><%= doc.set_user_count_seven_days*14%></td>
+        <td><%= doc.set_user_count_all_time*125 %></td>
 
 
         <td><%= link_to 'Переглянути', doc %></td>

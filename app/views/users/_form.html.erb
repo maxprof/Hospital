@@ -33,10 +33,7 @@
     <%= f.label "Дата поступлення" %><br>
     <%= f.date_select :enter_date , class:"form-control"%>
   </div>
-  <div class="field">
-    <%= f.label "Вибір ліків" %><br>
-    <%= f.select( :user_prices, Price.all.map {|c| [c.title]}, {:multiple=>true}) %>
-  </div>
+
     <div class="field">
     <%= f.label "Діагноз" %><br>
     <%= f.text_area :diagnoz, class:"form-control" %>
